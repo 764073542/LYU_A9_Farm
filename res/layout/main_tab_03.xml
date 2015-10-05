@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_02"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <!-- 空气温湿度信息 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="60dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="光照强度："
+                android:textColor="@android:color/secondary_text_light"
+                android:textSize="40dip" />
+            <!-- 空气温度 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="光照强度："
+                    android:textColor="@android:color/background_light"
+                    android:textSize="35dip" />
+
+                <EditText
+                    android:id="@+id/edt_lux"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:editable="false"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/edt_textsize" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Lux"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="35dip" />
+            </LinearLayout>
+            <!-- 空气湿度 -->
+
+            <ImageButton
+                android:id="@+id/img_light"
+                android:layout_width="120dip"
+                android:layout_height="120dip"
+                android:layout_gravity="center"
+                android:layout_marginTop="100dip"
+                android:background="@drawable/btn_light_open" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="1dip"
+                android:background="@drawable/xml_bg_btn_single"
+                android:orientation="horizontal"
+                android:padding="45dip" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="25dip" >
+
+                    <Button
+                        android:id="@+id/btn_light_open"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/button_open" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="打开"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/tv_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="25dip" >
+
+                    <Button
+                        android:id="@+id/btn_light_close"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/button_close" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="关闭"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/tv_textsize" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <!-- 土壤温湿度信息 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="60dp"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CO2浓度："
+                    android:textColor="@android:color/secondary_text_light"
+                    android:textSize="40dip" />
+                <!-- 土壤温度 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CO2浓度："
+                        android:textColor="@android:color/background_light"
+                        android:textSize="35dip" />
+
+                    <EditText
+                        android:id="@+id/edt_co2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:editable="false"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/edt_textsize" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="ppm"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="35dip" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="220dip" >
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:text=""
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="#00aa11" />
+
+                    <ImageButton
+                        android:id="@+id/img_fan_close"
+                        android:layout_width="120dip"
+                        android:layout_height="120dip"
+                        android:layout_below="@+id/textView1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="100dip"
+                        android:background="@drawable/btn_fan_close" />
+
+                    <ProgressBar
+                        android:id="@+id/Progress_fan_open"
+                        android:layout_width="120dip"
+                        android:layout_height="120dip"
+                        android:layout_below="@+id/textView1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="100dip"
+                        android:indeterminateDrawable="@anim/fan_loging"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="1dip"
+                    android:background="@drawable/xml_bg_btn_single"
+                    android:orientation="horizontal"
+                    android:padding="45dip" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="25dip" >
+
+                        <Button
+                            android:id="@+id/btn_fan_open"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/button_open" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="打开"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/tv_textsize" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="25dip" >
+
+                        <Button
+                            android:id="@+id/btn_fan_close"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/button_close" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="关闭"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/tv_textsize" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

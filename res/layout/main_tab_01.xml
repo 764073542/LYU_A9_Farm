@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ly_main_weixin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_mainview"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <!-- 空气温湿度信息 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="60dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="空气信息："
+                android:textColor="@android:color/secondary_text_light"
+                android:textSize="40dip" />
+            <!-- 空气温度 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="温度："
+                    android:textSize="35dip" />
+
+                <EditText
+                    android:id="@+id/edt_air_temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:editable="false"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/edt_textsize" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="℃    "
+                    android:textSize="35dip" />
+            </LinearLayout>
+            <!-- 空气湿度 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="湿度："
+                    android:textSize="35dip" />
+
+                <EditText
+                    android:id="@+id/edt_air_humidity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:editable="false"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/edt_textsize" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:text="%RH"
+                    android:textSize="35dip" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/img_heater"
+                android:layout_width="120dip"
+                android:layout_height="120dip"
+                android:layout_gravity="center"
+                android:layout_marginTop="45dip"
+                android:background="@drawable/btn_heater" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="1dip"
+                android:background="@drawable/xml_bg_btn_single"
+                android:orientation="horizontal"
+                android:padding="45dip" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="25dip" >
+
+                    <Button
+                        android:id="@+id/btn_heater_open"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/button_open" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="打开"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/tv_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="25dip" >
+
+                    <Button
+                        android:id="@+id/btn_heater_close"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/button_close" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="关闭"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/tv_textsize" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <!-- 土壤温湿度信息 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="60dp"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="土壤信息："
+                    android:textColor="@android:color/secondary_text_light"
+                    android:textSize="40dip" />
+                <!-- 土壤温度 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="温度："
+                        android:textSize="35dip" />
+
+                    <EditText
+                        android:id="@+id/edt_soil_temp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:editable="false"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/edt_textsize" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="℃    "
+                        android:textSize="35dip" />
+                </LinearLayout>
+                <!-- 土壤湿度 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="湿度："
+                        android:textSize="35dip" />
+
+                    <EditText
+                        android:id="@+id/edt_soil_humidity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:editable="false"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/edt_textsize" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="%RH"
+                        android:textSize="35dip" />
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/img_water"
+                    android:layout_width="120dip"
+                    android:layout_height="120dip"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="45dip"
+                    android:background="@drawable/btn_water_open" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="1dip"
+                    android:background="@drawable/xml_bg_btn_single"
+                    android:orientation="horizontal"
+                    android:padding="45dip" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="25dip" >
+
+                        <Button
+                            android:id="@+id/btn_water_open"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/button_open" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="打开"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/tv_textsize" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="25dip" >
+
+                        <Button
+                            android:id="@+id/btn_water_close"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/button_close" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="关闭"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/tv_textsize" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
